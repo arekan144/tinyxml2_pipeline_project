@@ -1,8 +1,8 @@
 Pipeline:
-	copy this repository
- 	build
-  	???
-   	exercise done
+*copy this repository
+*build
+*???
+*exercise done
 
 Head of orginal readme.md file:
 =========
