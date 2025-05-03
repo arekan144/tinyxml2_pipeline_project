@@ -7,4 +7,6 @@ WORKDIR /app
 
 COPY ./* .
 
+RUN ls -l .
+
 RUN make rebuild
