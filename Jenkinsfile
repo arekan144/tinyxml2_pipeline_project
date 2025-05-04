@@ -21,9 +21,10 @@ pipeline {
             steps
             {
                 echo "Test stage..."
+                sh '''docker build -t test -f test.Dockerfile .'''
                 script
                 {
-                    def output = sh(script: "docker build -t test -f test.Dockerfile .", returnStdout: true)
+                    def output = sh(script: "docker run test cat /app/Result.txt", returnStdout: true)
                     echo "Captured test output:\n${output}"
                     writeFile file: "Result.log", text: output
                 }
