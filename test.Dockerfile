@@ -2,8 +2,6 @@ FROM build
 
 WORKDIR /app
 
-RUN make test | tail -n10 > Result.txt
-
-RUN cat Result.txt
+RUN make test > Result.txt
 
 CMD ["bash"]
